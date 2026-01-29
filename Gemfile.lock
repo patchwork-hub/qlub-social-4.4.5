@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/accounts
-  revision: bc713fe0e0a068224130397f77eaaa4e3b56808b
-  branch: main
+  revision: 039beb17fc96d49005cf6c9e1dbc9d8984babffe
+  branch: mastodon-4.4.5
   specs:
     accounts (0.1.0)
       byebug (~> 11.1)
@@ -21,7 +21,7 @@ GIT
 GIT
   remote: https://github.com/patchwork-hub/conversations
   revision: 0adb4ac11e1a616794fcc2801242e4498b457c6f
-  branch: main
+  branch: mastodon-4.4.5
   specs:
     conversations (0.1.0)
       annotaterb (~> 4.13)
@@ -31,7 +31,7 @@ GIT
 GIT
   remote: https://github.com/patchwork-hub/posts
   revision: d07854fa9b4c2574edb0f868aef4e062cb96380a
-  branch: main
+  branch: mastodon-4.4.5
   specs:
     posts (0.1.0)
       annotaterb (~> 4.13)
@@ -321,7 +321,7 @@ GEM
       rake (>= 13)
     googleapis-common-protos-types (1.20.0)
       google-protobuf (>= 3.18, < 5.a)
-    googleauth (1.16.0)
+    googleauth (1.16.1)
       faraday (>= 1.0, < 3.a)
       google-cloud-env (~> 2.2)
       google-logging-utils (~> 0.1)
