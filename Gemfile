@@ -230,3 +230,12 @@ gem 'hcaptcha', '~> 7.1'
 gem 'mail', '~> 2.8'
 
 gem 'vite_rails', '~> 3.0.19'
+
+gem 'accounts', git: 'https://github.com/patchwork-hub/accounts', ref: 'bc713fe0e0a068224130397f77eaaa4e3b56808b'
+gem 'conversations', git: 'https://github.com/patchwork-hub/conversations', branch: 'main'
+gem 'posts', git: 'https://github.com/patchwork-hub/posts', branch: 'main'
+
+# gem 'accounts', path: '/Users/sayamac/workplace/patchwork/gems/accounts'
+
+# *** Add this alongside Post Gems ***
+gem 'faraday-typhoeus', '~> 1.1'
