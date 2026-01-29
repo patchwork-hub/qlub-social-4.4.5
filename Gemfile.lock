@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/accounts
-  revision: bc713fe0e0a068224130397f77eaaa4e3b56808b
-  ref: bc713fe0e0a068224130397f77eaaa4e3b56808b
+  revision: bdf2d91ae1259063821dc474e156a8061a062994
+  branch: main
   specs:
     accounts (0.1.0)
       byebug (~> 11.1)
