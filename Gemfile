@@ -233,7 +233,7 @@ gem 'vite_rails', '~> 3.0.19'
 
 gem 'accounts', git: 'https://github.com/patchwork-hub/accounts', branch: 'fix-main'
 gem 'conversations', git: 'https://github.com/patchwork-hub/conversations', branch: 'main'
-gem 'posts', git: 'https://github.com/patchwork-hub/posts', branch: 'main'
+gem 'posts', git: 'https://github.com/patchwork-hub/posts', branch: 'fix_main'
 
 # *** Add this alongside Post Gems ***
 gem 'faraday-typhoeus', '~> 1.1'

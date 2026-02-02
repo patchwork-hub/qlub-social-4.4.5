@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/accounts
-  revision: 3020ffd64bee9fb93f7fcb1e48052f98476445b8
+  revision: 0ffb82695d49c750f09338e725fa72bbf8846927
   branch: fix-main
   specs:
     accounts (0.1.0)
@@ -30,8 +30,8 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/posts
-  revision: d07854fa9b4c2574edb0f868aef4e062cb96380a
-  branch: main
+  revision: ff31fdbc38f4fccd4421ff5945f4f60baa118260
+  branch: fix_main
   specs:
     posts (0.1.0)
       annotaterb (~> 4.13)
