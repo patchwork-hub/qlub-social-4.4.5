@@ -10,7 +10,7 @@ GIT
 GIT
   remote: https://github.com/patchwork-hub/accounts
   revision: 0ffb82695d49c750f09338e725fa72bbf8846927
-  branch: fix-main
+  branch: main
   specs:
     accounts (0.1.0)
       byebug (~> 11.1)
@@ -31,7 +31,7 @@ GIT
 GIT
   remote: https://github.com/patchwork-hub/posts
   revision: ff31fdbc38f4fccd4421ff5945f4f60baa118260
-  branch: fix_main
+  branch: main
   specs:
     posts (0.1.0)
       annotaterb (~> 4.13)
