@@ -30,8 +30,8 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/posts
-  revision: ff31fdbc38f4fccd4421ff5945f4f60baa118260
-  branch: main
+  revision: dfc8f498257516e8d24c1e70b6b5e71fd1d59b88
+  branch: feat-reblog-4.4.5
   specs:
     posts (0.1.0)
       annotaterb (~> 4.13)
@@ -262,8 +262,9 @@ GEM
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
-    ethon (0.15.0)
+    ethon (0.18.0)
       ffi (>= 1.15.0)
+      logger
     excon (1.2.5)
       logger
     fabrication (3.0.0)
@@ -321,7 +322,7 @@ GEM
       rake (>= 13)
     googleapis-common-protos-types (1.20.0)
       google-protobuf (>= 3.18, < 5.a)
-    googleauth (1.16.1)
+    googleauth (1.16.2)
       faraday (>= 1.0, < 3.a)
       google-cloud-env (~> 2.2)
       google-logging-utils (~> 0.1)
@@ -975,8 +976,8 @@ GEM
     twitter-text (3.1.0)
       idn-ruby
       unf (~> 0.1.0)
-    typhoeus (1.5.0)
-      ethon (>= 0.9.0, < 0.16.0)
+    typhoeus (1.6.0)
+      ethon (>= 0.18.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2025.2)
