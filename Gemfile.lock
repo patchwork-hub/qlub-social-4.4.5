@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/accounts
-  revision: 039beb17fc96d49005cf6c9e1dbc9d8984babffe
+  revision: 38201c40ca5d43c9c88166182f165393257f6889
   branch: mastodon-4.4.5
   specs:
     accounts (0.1.0)
@@ -20,7 +20,7 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/conversations
-  revision: 0adb4ac11e1a616794fcc2801242e4498b457c6f
+  revision: d537a6f978f86a536d59282102d8acac95bf3ce1
   branch: mastodon-4.4.5
   specs:
     conversations (0.1.0)
@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/posts
-  revision: d07854fa9b4c2574edb0f868aef4e062cb96380a
+  revision: dfc8f498257516e8d24c1e70b6b5e71fd1d59b88
   branch: mastodon-4.4.5
   specs:
     posts (0.1.0)
@@ -125,7 +125,7 @@ GEM
     annotaterb (4.16.0)
       activerecord (>= 6.0.0)
       activesupport (>= 6.0.0)
-    ansi (1.5.0)
+    ansi (1.6.0)
     ast (2.4.3)
     attr_required (1.0.2)
     aws-eventstream (1.3.2)
@@ -262,8 +262,9 @@ GEM
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
-    ethon (0.15.0)
+    ethon (0.18.0)
       ffi (>= 1.15.0)
+      logger
     excon (1.2.5)
       logger
     fabrication (3.0.0)
@@ -321,7 +322,7 @@ GEM
       rake (>= 13)
     googleapis-common-protos-types (1.20.0)
       google-protobuf (>= 3.18, < 5.a)
-    googleauth (1.16.1)
+    googleauth (1.16.2)
       faraday (>= 1.0, < 3.a)
       google-cloud-env (~> 2.2)
       google-logging-utils (~> 0.1)
@@ -513,7 +514,7 @@ GEM
     minitest (5.25.5)
     msgpack (1.8.0)
     multi_json (1.15.0)
-    multi_xml (0.8.1)
+    multi_xml (0.9.1)
       bigdecimal (>= 3.1, < 5)
     mutex_m (0.3.0)
     net-http (0.6.0)
@@ -975,8 +976,8 @@ GEM
     twitter-text (3.1.0)
       idn-ruby
       unf (~> 0.1.0)
-    typhoeus (1.5.0)
-      ethon (>= 0.9.0, < 0.16.0)
+    typhoeus (1.6.0)
+      ethon (>= 0.18.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2025.2)
@@ -1051,6 +1052,7 @@ DEPENDENCIES
   brakeman (~> 7.0)
   browser
   bundler-audit (~> 0.9)
+  byebug
   capybara (~> 3.39)
   capybara-playwright-driver
   charlock_holmes (~> 0.7.7)

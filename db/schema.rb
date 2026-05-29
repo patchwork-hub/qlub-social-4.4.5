@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_27_132728) do
+ActiveRecord::Schema[8.0].define(version: 2026_02_06_025133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -834,6 +834,15 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_27_132728) do
     t.index ["account_id"], name: "index_patchwork_notification_tokens_on_account_id"
   end
 
+  create_table "patchwork_settings", force: :cascade do |t|
+    t.integer "app_name", default: 0, null: false
+    t.bigint "account_id", null: false
+    t.jsonb "settings", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_patchwork_settings_on_account_id"
+  end
+
   create_table "pghero_space_stats", force: :cascade do |t|
     t.text "database"
     t.text "schema"
@@ -1305,6 +1314,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_27_132728) do
     t.string "otp_secret"
     t.datetime "age_verified_at"
     t.boolean "require_tos_interstitial", default: false, null: false
+    t.boolean "alttext_enabled", default: false, null: false
     t.index ["account_id"], name: "index_users_on_account_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["created_by_application_id"], name: "index_users_on_created_by_application_id", where: "(created_by_application_id IS NOT NULL)"
@@ -1455,6 +1465,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_27_132728) do
   add_foreign_key "oauth_applications", "users", column: "owner_id", name: "fk_b0988c7c0a", on_delete: :cascade
   add_foreign_key "patchwork_drafted_statuses", "accounts", on_delete: :cascade
   add_foreign_key "patchwork_notification_tokens", "accounts", on_delete: :cascade
+  add_foreign_key "patchwork_settings", "accounts", on_delete: :cascade
   add_foreign_key "poll_votes", "accounts", on_delete: :cascade
   add_foreign_key "poll_votes", "polls", on_delete: :cascade
   add_foreign_key "polls", "accounts", on_delete: :cascade
