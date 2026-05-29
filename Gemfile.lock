@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/accounts
-  revision: 0ffb82695d49c750f09338e725fa72bbf8846927
-  branch: main
+  revision: 38201c40ca5d43c9c88166182f165393257f6889
+  branch: mastodon-4.5.5
   specs:
     accounts (0.1.0)
       byebug (~> 11.1)
@@ -20,8 +20,8 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/conversations
-  revision: 0adb4ac11e1a616794fcc2801242e4498b457c6f
-  branch: main
+  revision: d537a6f978f86a536d59282102d8acac95bf3ce1
+  branch: mastodon-4.5.5
   specs:
     conversations (0.1.0)
       annotaterb (~> 4.13)
@@ -30,8 +30,8 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/posts
-  revision: dfc8f498257516e8d24c1e70b6b5e71fd1d59b88
-  branch: feat-reblog-4.4.5
+  revision: 3e5df2ef5e5a18bce41657bd6b5e4a4502821abe
+  branch: mastodon-4.5.5
   specs:
     posts (0.1.0)
       annotaterb (~> 4.13)
@@ -125,7 +125,7 @@ GEM
     annotaterb (4.16.0)
       activerecord (>= 6.0.0)
       activesupport (>= 6.0.0)
-    ansi (1.5.0)
+    ansi (1.6.0)
     ast (2.4.3)
     attr_required (1.0.2)
     aws-eventstream (1.3.2)
@@ -514,7 +514,7 @@ GEM
     minitest (5.25.5)
     msgpack (1.8.0)
     multi_json (1.15.0)
-    multi_xml (0.8.1)
+    multi_xml (0.9.1)
       bigdecimal (>= 3.1, < 5)
     mutex_m (0.3.0)
     net-http (0.6.0)
@@ -1052,6 +1052,7 @@ DEPENDENCIES
   brakeman (~> 7.0)
   browser
   bundler-audit (~> 0.9)
+  byebug
   capybara (~> 3.39)
   capybara-playwright-driver
   charlock_holmes (~> 0.7.7)
