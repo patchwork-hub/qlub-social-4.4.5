@@ -1,3 +1,16 @@
+# Qlub Social
+
+![Qlub Social Logo](https://qlub.social/system/site_uploads/files/000/000/006/@2x/830f401aeeb0e080.png)
+
+This is a fork of the Mastodon project. Qlub social is a social network that is built on top of Mastodon.
+
+We have customized logos images and simplified the UI/UX. All other features are the same as Mastodon. We also have changed options to help quebec users to be more comfortable with the platform (ex: the default and only language is french).
+
+- [Qlub Social](https://qlub.social)
+- [Contact us](mailto:bonjour@qlub.social)
+
+---
+
 > [!NOTE]
 > Want to learn more about Mastodon?
 > Click below to find out more in a video.
