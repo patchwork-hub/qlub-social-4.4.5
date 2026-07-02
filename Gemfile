@@ -195,7 +195,7 @@ group :development do
   # Validate missing i18n keys
   gem 'i18n-tasks', '~> 1.0', require: false
 
-  gem 'byebug'
+  gem 'byebug', '~> 11.1.3', require: false
 end
 
 group :development, :test do

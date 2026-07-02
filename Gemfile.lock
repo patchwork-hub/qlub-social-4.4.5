@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/patchwork-hub/accounts
-  revision: 38201c40ca5d43c9c88166182f165393257f6889
+  revision: 8e7ef6f033f60d50f8ebdcac315638f4dfa153bf
   branch: mastodon-4.4.5
   specs:
     accounts (0.1.0)
@@ -1064,7 +1064,7 @@ DEPENDENCIES
   brakeman (~> 7.0)
   browser
   bundler-audit (~> 0.9)
-  byebug
+  byebug (~> 11.1.3)
   capybara (~> 3.39)
   capybara-playwright-driver
   charlock_holmes (~> 0.7.7)
