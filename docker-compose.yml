@@ -134,6 +134,18 @@ services:
   #     - external_network
   #     - internal_network
 
+  bundle_update:
+    image: ghcr.io/mastodon/mastodon:v4.4.18
+    volumes:
+      - .:/opt/mastodon
+    working_dir: /opt/mastodon
+    # Use 'bundle update' followed by the specific git gems to avoid
+    # updating every single gem in your Gemfile.
+    user: root:root
+    command: >
+      sh -c "apt update -y && apt install git -y &&
+      bundle lock"
+
 networks:
   external_network:
   internal_network:

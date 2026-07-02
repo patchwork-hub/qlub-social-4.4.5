@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import {
   domain,
   version,
-  source_url,
   statusPageUrl,
   profile_directory as canProfileDirectory,
   termsOfServiceEnabled,
@@ -68,26 +67,16 @@ export const LinkFooter: React.FC<{
             </Link>
           </>
         )}
-      </p>
-
-      <p>
-        <strong>Mastodon</strong>:{' '}
-        <a href='https://joinmastodon.org' target='_blank' rel='noopener'>
-          <FormattedMessage id='footer.about' defaultMessage='About' />
-        </a>
         <DividingCircle />
-        <a href='https://joinmastodon.org/apps' target='_blank' rel='noopener'>
+        <a href='https://site.qlub.social/apps/' target='_blank' rel='noopener'>
           <FormattedMessage id='footer.get_app' defaultMessage='Get the app' />
         </a>
         <DividingCircle />
-        <Link to='/keyboard-shortcuts'>
-          <FormattedMessage
-            id='footer.keyboard_shortcuts'
-            defaultMessage='Keyboard shortcuts'
-          />
-        </Link>
-        <DividingCircle />
-        <a href={source_url} rel='noopener' target='_blank'>
+        <a
+          href='https://github.com/fedihost-co/qlub-social/'
+          rel='noopener'
+          target='_blank'
+        >
           <FormattedMessage
             id='footer.source_code'
             defaultMessage='View source code'
@@ -95,6 +84,13 @@ export const LinkFooter: React.FC<{
         </a>
         <DividingCircle />
         <span className='version'>v{version}</span>
+      </p>
+
+      <p>
+        Fièrement hébergé au Québec par{' '}
+        <a href='https://fedihost.co' target='_blank' rel='noopener'>
+          FediHost
+        </a>
       </p>
     </div>
   );

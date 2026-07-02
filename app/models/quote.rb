@@ -21,7 +21,7 @@ class Quote < ApplicationRecord
   REFRESH_DEADLINE = 6.hours
 
   enum :state,
-       { pending: 0, accepted: 1, rejected: 2, revoked: 3 },
+       { pending: 0, accepted: 1, rejected: 2, revoked: 3, deleted: 4 },
        validate: true
 
   belongs_to :status
@@ -34,16 +34,21 @@ class Quote < ApplicationRecord
   before_validation :set_activity_uri, only: :create, if: -> { account.local? && quoted_account&.remote? }
   validates :activity_uri, presence: true, if: -> { account.local? && quoted_account&.remote? }
   validate :validate_visibility
+  validate :validate_original_quoted_status
 
-  def accept!
-    update!(state: :accepted)
+  def accept!(approval_uri: nil)
+    if approval_uri.present?
+      update!(state: :accepted, approval_uri:)
+    else
+      update!(state: :accepted)
+    end
   end
 
   def reject!
     if accepted?
-      update!(state: :revoked)
+      update!(state: :revoked, approval_uri: nil)
     elsif !revoked?
-      update!(state: :rejected)
+      update!(state: :rejected, approval_uri: nil)
     end
   end
 
@@ -68,6 +73,10 @@ class Quote < ApplicationRecord
     return if account_id == quoted_account_id || quoted_status.nil? || quoted_status.distributable?
 
     errors.add(:quoted_status_id, :visibility_mismatch)
+  end
+
+  def validate_original_quoted_status
+    errors.add(:quoted_status_id, :reblog_unallowed) if quoted_status&.reblog?
   end
 
   def set_activity_uri
