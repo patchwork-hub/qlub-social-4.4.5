@@ -230,9 +230,7 @@ gem 'hcaptcha', '~> 7.1'
 
 gem 'mail', '~> 2.8'
 
-gem 'vite_rails', '~> 3.0.19'
+gem 'vite_rails'
 
-gem 'accounts', git: 'https://github.com/patchwork-hub/accounts', branch: 'main'
-gem 'posts', git: 'https://github.com/patchwork-hub/posts', branch: 'main'
-gem 'conversations', git: 'https://github.com/patchwork-hub/conversations', branch: 'main'
-gem 'faraday-typhoeus', '~> 1.1'
+# Patchwork/Newsmast engine
+gem 'newsmast_mastodon', git: 'https://github.com/patchwork-hub/newsmast_mastodon.git', branch: 'mastodon-4.6.5'

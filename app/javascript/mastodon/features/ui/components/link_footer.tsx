@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import {
   domain,
   version,
+  source_url,
   statusPageUrl,
   profile_directory as canProfileDirectory,
   termsOfServiceEnabled,
@@ -59,27 +60,63 @@ export const LinkFooter: React.FC<{
                 defaultMessage='Privacy policy'
               />
             </Link>
-          </>
-        )}
-        <DividingCircle />
-        <a href='https://site.qlub.social/apps/' target='_blank' rel='noopener'>
-          <FormattedMessage id='footer.get_app' defaultMessage='Get the app' />
-        </a>
-        <DividingCircle />
-        <a href='https://github.com/fedihost-co/qlub-social/' rel='noopener' target='_blank'>
-          <FormattedMessage
-            id='footer.source_code'
-            defaultMessage='View source code'
-          />
-        </a>
-        <DividingCircle />
-        <span className='version'>v{version}</span>
-      </p>
-
-      <p>
-        Fièrement hébergé au Québec par{' '}
-        <a href='https://fedihost.co' target='_blank' rel='noopener'>FediHost</a>
-      </p>
-    </div>
+          </li>
+          {termsOfServiceEnabled && (
+            <li>
+              <Link
+                to='/terms-of-service'
+                target={multiColumn ? '_blank' : undefined}
+                rel='terms-of-service'
+              >
+                <FormattedMessage
+                  id='footer.terms_of_service'
+                  defaultMessage='Terms of service'
+                />
+              </Link>
+            </li>
+          )}
+        </ul>
+      </section>
+      <section>
+        <h2 className={classes.heading}>Mastodon:</h2>
+        <ul className={classes.list}>
+          <li>
+            <a href='https://joinmastodon.org' target='_blank' rel='noopener'>
+              <FormattedMessage id='footer.about' defaultMessage='About' />
+              <span className='sr-only'> Mastodon</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href='https://joinmastodon.org/apps'
+              target='_blank'
+              rel='noopener'
+            >
+              <FormattedMessage
+                id='footer.get_app'
+                defaultMessage='Get the app'
+              />
+            </a>
+          </li>
+          <li>
+            <Link to='/keyboard-shortcuts'>
+              <FormattedMessage
+                id='footer.keyboard_shortcuts'
+                defaultMessage='Keyboard shortcuts'
+              />
+            </Link>
+          </li>
+          <li>
+            <a href={source_url} rel='noopener' target='_blank'>
+              <FormattedMessage
+                id='footer.source_code'
+                defaultMessage='View source code'
+              />
+            </a>
+          </li>
+          <li className={classes.version}>v{version}</li>
+        </ul>
+      </section>
+    </footer>
   );
 };
